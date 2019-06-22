@@ -1,0 +1,42 @@
+body{
+    overflow-y: hidden;
+}
+.header-body{
+    background: #476992 !important;
+    margin-bottom :0px !important;
+    box-shadow:none !important;
+    padding-bottom: 43px !important;
+   
+}
+.container-body{
+    background: white;
+    height: 81.8%;
+}
+mat-drawer-container{
+    height: 100%;
+    background: #e8e4e494 !important;
+
+}
+.nav-drag-btn{
+    color: black !important;
+}
+
+.example-sidenav{
+    background:   #717d7d;
+}
+
+.bootomPadding{
+    padding-bottom: 1% !important;
+}
+
+.header-body-row{
+    margin-bottom :0px !important
+}
+.toggle-menu-btn{
+    color:white !important;
+}
+
+.untoggle-menu-btn{
+    
+    color:red !important;
+ }

@@ -1,0 +1,89 @@
+<div class="row header-body-row">
+ <mat-card class="header-body">
+    <div class="col s1 bootomPadding">
+        <span *ngIf="toggle"   (click)="toggle=false;drawer.toggle()" style="cursor: pointer;"><i class="nav-drag-btn material-icons" [ngClass]="{'toggle-menu-btn':toggle}">format_list_bulleted</i></span>
+        <span *ngIf="!toggle"   (click)="toggle=true;drawer.toggle()" style="cursor: pointer;"><i class="nav-drag-btn material-icons" [ngClass]="{'untoggle-menu-btn':(!toggle)}">format_list_bulleted</i></span>
+      </div>
+    <div class="col s2 bootomPadding">
+      Logo Here
+    </div>
+    <div class="col s6 bootomPadding">
+    </div>
+    <div class="col s2 bootomPadding">
+      Welcome User
+      </div>
+    <div class="col s1 bootomPadding">
+        <span style="cursor: pointer;  background: #476992 !important;color:red"><i class="material-icons">power_settings_new</i></span>
+    </div>
+ </mat-card>
+</div>
+<div class="container-body">
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    
+
+
+
+
+      <mat-accordion>
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+              Settings 
+              </mat-panel-title>
+              <mat-panel-description>
+                  <span><i class="material-icons">settings</i></span>
+              </mat-panel-description>
+              
+            </mat-expansion-panel-header>
+            
+                <button mat-button color="Basic">Profile Setup <i class="material-icons">perm_identity</i></button>
+                
+                    
+               
+         </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Self aware panel
+              </mat-panel-title>
+              <mat-panel-description>
+              
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            
+          </mat-expansion-panel>
+
+
+            
+
+
+
+
+        </mat-accordion>
+
+
+
+
+
+
+
+
+
+  </mat-drawer>
+
+  <!-- <div class="example-sidenav-content">
+      <span  *ngIf="toggle"   (click)="toggle=false;drawer.toggle()" style="cursor: pointer;"><i class="nav-drag-btn material-icons">chevron_right</i></span>
+      <span  *ngIf="!toggle"  (click)="toggle=true;drawer.toggle()" style="cursor: pointer;"><i class="nav-drag-btn material-icons">chevron_left</i></span>
+      
+  </div> -->
+  
+
+</mat-drawer-container>
+</div>
+<div class="row " style="margin-bottom: 0px !important;">
+    <mat-card class="">
+       Footer Works
+    </mat-card>
+   </div>
