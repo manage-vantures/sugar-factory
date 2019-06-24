@@ -7,13 +7,22 @@
     <div class="col s2 bootomPadding">
       Logo Here
     </div>
+
+    
+  
+   
     <div class="col s6 bootomPadding">
+        <div class="search-wrapper" >
+            
+            <input id="search" placeholder="Search" style="height:100%"/>
+            
+          </div>
     </div>
     <div class="col s2 bootomPadding">
       Welcome User
       </div>
     <div class="col s1 bootomPadding">
-        <span style="cursor: pointer;  background: #476992 !important;color:red"><i class="material-icons">power_settings_new</i></span>
+        <span style="cursor: pointer;  background: rgb(63, 81, 181) !important;color:red"><i class="material-icons">power_settings_new</i></span>
     </div>
  </mat-card>
 </div>
@@ -25,52 +34,37 @@
 
 
 
-      <mat-accordion>
-          <mat-expansion-panel>
+      <mat-accordion class="side-menu">
+          <mat-expansion-panel style="background: white">
             <mat-expansion-panel-header>
-              <mat-panel-title>
+              <mat-panel-title style="color: black;">
+              Contractors
+            </mat-panel-title>
+              <mat-panel-description>
+                  <span><i class="material-icons"><img src="https://img.icons8.com/material-outlined/24/000000/worker-male.png"></i></span>
+              </mat-panel-description>
+              
+            </mat-expansion-panel-header>
+            
+                <button mat-button color="Basic"  style="color: black;" routerLink="/contractor">Add <i style="padding-left: 11px;padding-bottom: 7px;" class="material-icons">person_add</i></button>
+         </mat-expansion-panel>
+
+
+         <mat-expansion-panel style="background: white">
+            <mat-expansion-panel-header>
+              <mat-panel-title style="color: black;">
               Settings 
               </mat-panel-title>
-              <mat-panel-description>
-                  <span><i class="material-icons">settings</i></span>
+              <mat-panel-description  style="color: black;">
+                  <span style="padding-left: 22px;"><i class="material-icons">settings</i></span>
               </mat-panel-description>
               
             </mat-expansion-panel-header>
-            
-                <button mat-button color="Basic">Profile Setup <i class="material-icons">perm_identity</i></button>
-                
-                    
-               
-         </mat-expansion-panel>
-          <mat-expansion-panel (opened)="panelOpenState = true"
-                               (closed)="panelOpenState = false">
-            <mat-expansion-panel-header>
-              <mat-panel-title>
-                Self aware panel
-              </mat-panel-title>
-              <mat-panel-description>
-              
-              </mat-panel-description>
-            </mat-expansion-panel-header>
-            
+                <button mat-button color="Basic"  style="color: black;">Profile Setup <i class="material-icons">perm_identity</i></button>
           </mat-expansion-panel>
+          </mat-accordion>
 
-
-            
-
-
-
-
-        </mat-accordion>
-
-
-
-
-
-
-
-
-
+   
   </mat-drawer>
 
   <!-- <div class="example-sidenav-content">
@@ -79,11 +73,11 @@
       
   </div> -->
   
-
+  <router-outlet></router-outlet>
 </mat-drawer-container>
 </div>
-<div class="row " style="margin-bottom: 0px !important;">
-    <mat-card class="">
+<div class="row" style="margin-bottom: 0px !important;">
+    <mat-card class="footer-body">
        Footer Works
     </mat-card>
    </div>
